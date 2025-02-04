@@ -28,12 +28,28 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 // /*=============== SHOW DROPDOWN ===============*/
-// const showDropdown = (dropdownId) =>{
-//    const dropdown = document.getElementById(dropdownId)
+document.addEventListener("DOMContentLoaded", function () {
+   const nav_scroll = document.querySelector(".nav");
 
-//    dropdown.addEventListener('click', ()=>{
-//       /* Show dropdown */
-//       dropdown.classList.toggle('show-dropdown')
-//    })
-// }
-// showDropdown('dropdown')
+   window.addEventListener("scroll", function () {
+       if (window.scrollY > 50) {
+           nav_scroll.classList.add("shrink");
+       } else {
+           nav_scroll.classList.remove("shrink");
+       }
+   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+   const header = document.querySelector(".header");
+
+   window.addEventListener("scroll", function () {
+       if (window.scrollY > 50) {
+           header.classList.add("shrink");
+       } else {
+           header.classList.remove("shrink");
+       }
+   });
+});
+
+

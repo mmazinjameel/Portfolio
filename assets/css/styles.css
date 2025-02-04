@@ -1,6 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -14,11 +14,7 @@
   --dark-color-light: hsl(216, 14%, 24%);
   --body-color: hsl(216, 96%, 98%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Josefin Sans", serif;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -49,11 +45,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-}
+} */
 
 ul {
   list-style: none;
@@ -73,6 +69,11 @@ img {
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: .980rem;
+  font-weight: 229;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -81,54 +82,38 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--dark-color);
+  background-color: black;
+  /* background-color: transparent; */
   z-index: var(--z-fixed);
+  transition: background-color 0.4s;
 }
 
 .nav {
   position: relative;
   height: var(--header-height);
+  /* background-color: purple; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--white-color);
+  transition: height 0.4s ease-in-out; /* Smooth transition */
 }
 
 .nav__logo {
-  color: rgb(241, 241, 85);
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  color: #F8B400; /* Adjust the color to match the yellow shade */
   transition: color .4s;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .ri-file-pdf-2-line{
   font-size: 1rem;
 }
 
-.nav__logo:hover {
-  color: var(--first-color);
-}
 
 
-.nav__logo::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0; /* Start with no width */
-  height: 100%;
-  background-color: var(--first-color); /* The color that fills in */
-  z-index: -1; /* Place behind the text */
-  transition: width 0.4s ease-in-out; /* Smoothly expand */
-}
 
-.nav__logo:hover::after {
-  width: 100%; /* Fully fill from left to right */
-}
-
-.nav__logo:hover {
-  color: white; /* Change text color to contrast the background */
-}
 
 
 
@@ -153,6 +138,8 @@ img {
     z-index: var(--z-fixed);
     transition: top .4s;
   }
+
+  
 }
 
 .nav__list {
@@ -169,7 +156,7 @@ img {
 }
 
 .nav__link:hover {
-  color: rgb(241, 241, 85);
+  color: #F8B400; /* Adjust the color to match the yellow shade */
 }
 
 .nav__close {
@@ -197,6 +184,9 @@ img {
   .container {
     margin-inline: 1rem;
   }
+
+  
+  
 }
 
 /* For large devices */
@@ -220,6 +210,19 @@ img {
   .nav__menu {
     margin-left: auto;
   }
+  /* Shrinked navbar */
+  .nav.shrink {
+    height: var(--header-height);
+  }
+  .header.shrink{
+    background-color: var(--dark-color);
+  }
+
+
 }
+
+
+
+
 
 
