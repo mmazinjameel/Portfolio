@@ -224,5 +224,37 @@ img {
 
 
 
+.background_image_with_pic {
+  position: relative; /* Ensures positioning for the overlay */
+  background-image: url("../Images/b2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensures the div has height */
+  width: 100%;
+}
+
+.background_image_with_pic::before {
+  content: ""; /* Required to create the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Light black filter */
+  z-index: 1; /* Ensures it appears above the background */
+}
+
+.content {
+  position: relative; /* Ensures content appears above the overlay */
+  z-index: 2; /* Places the content above the overlay */
+  color: white; /* Ensures content is visible against the filter */
+  text-align: center; /* Centers text */
+  padding: 20px;
+}
+
+
+
 
 
