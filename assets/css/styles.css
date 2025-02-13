@@ -306,7 +306,20 @@ img {
 }
 
 
-
+.Enter_Portfolio_Button {
+  font-family: sans-serif;
+  margin-top: 20px;
+  align-self: center;
+  padding: 20px 45px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  border: 0px;
+}
+.Enter_Portfolio_Button:hover{
+  background-color: rgb(214, 214, 214);
+  border: 0px;
+}
 
 
 
